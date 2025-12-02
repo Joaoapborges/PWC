@@ -1,0 +1,225 @@
+
+
+*{
+    /* Garante que o padding e a borda sao incluidos no calculo altura/ largura*/
+    box-sizing: border-box
+}
+
+
+:root{
+    /* Definir variaveis*/
+    --cor_bar: #808080;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* Assegura que não há margens padrão do navegador */
+    margin: 0; 
+}
+
+/* container principal*/
+.page-container{
+    /* define a largura maxima do container*/
+    max-width: 1200px;
+    /*centraliza o container*/
+    margin: 0 auto;
+    padding: 2rem 1rem;
+   
+}
+
+
+
+/* Sistema de grelha */
+
+/* container linha "X"*/
+.grid-x{
+    display:flex;
+    /* nas telas pequenas, as colunas vao para a linha seguinte*/
+    flex-wrap: wrap;
+    /*remove a margem extra do container do foundation*/
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.grid-margin-x {
+    /* Compensa o padding de 0.5rem aplicado nas 'cells' */
+    margin-left: -0.5rem; 
+    margin-right: -0.5rem;
+}
+
+.cell {
+    /* cria espaço (calha) de 1rem (0.5rem de cada lado) */
+    padding-left: 0.5rem; 
+    padding-right: 0.5rem;
+}
+
+.cell.small-0{
+    width: 0%;
+    padding-left: 0;
+    padding-right: 0;
+    display: none;
+}
+
+
+
+
+
+/* ----------------------------- barra de navegação ------------------------------------------ */
+
+.top-bar{
+    /*flexbox para alinahr*/
+    display:Flex;
+    /*alinha conteudo á esquerda e direita*/
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--cor_bar);
+    /*color: #ffffff;*/
+    padding: 0.75rem 2rem;
+    
+    /*para a top abr ficar presa*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.top-bar-left, .top-bar-right{
+    /*felx box para manter itens alinhados*/
+    display:flex;
+    align-items:center;
+    
+}
+
+
+.button {
+    text-decoration: none;
+    background-color: #4a86cf; /* Cor primária */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    line-height: 1; /* Alinhamento iterno  */
+}
+
+
+/* Estilo do botão pequeno  */
+.button.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+.button:hover {
+    background-color: #0968ce;
+}
+
+
+
+/* estilo para o botao do menu hamburgur*/
+
+.menu-hamb{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    /*para mostrara a mãozinha*/
+    cursor: pointer;
+    padding: 0.5rem;
+    /* para nao aparecer no botão grande */
+    display: block; 
+}
+
+
+
+/*------------------------------------------------------------------------------------------------*/
+/* coloca os links dentro do hamburguer em ecra pequeno */
+.hamb-links {
+    display: none;
+    /* Para que os links apareçam verticalmente por baixo do cabeçalho */
+    position: absolute;
+    /* para ficarem abaixo datop-bar */
+    top: 100%; 
+    right: 0;
+    left: 0;
+    background-color: var(--cor_bar); 
+    /* para os links ficarem em coluna*/
+    flex-direction: column; 
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.hamb-links a.button {
+    /*colocar espaçamento nos botões*/
+    width: 90%;
+    margin: 0.5rem auto; 
+}
+
+
+/* Classe para MOSTRAR o menu quando for clicado (usada pelo JS) */
+.hamb-links.is-active {
+    display: flex;
+}
+
+
+
+
+
+
+
+/*colocar estas regras no final para subscreverm as anteriores*/
+/* adicionar breakpoint ( a partir de 640px)*/
+/* media screen: regras para aparecerem apenas quando for um ecra pequeno*/
+@media screen and (min-width:640px) {
+    
+    
+
+    /* medium 8 : 8/12 = 66.666% */
+    .cell.medium-8 {
+        width: 66.666%;
+    }
+
+    /* medium-4 ocupa 4/12 = 33.33% */
+    .cell.medium-4 {
+        width: 33.333%;
+        /* faz com que o indice fique preso enquanto se faz scroll no conteudo*/
+        position: sticky;
+        /*2 rem apra evitar cobrir a top bar*/
+        top:4rem;
+        align-self: flex-start; 
+        height: fit-content;
+
+        display: block;
+    }
+
+    /* Alinhar verticalmente os elementos para o indice */
+    .grid-x {
+        align-items: flex-start;
+    }
+
+
+   /*  Esconde o ícone de hambúrguer */
+    .menu-hamb {
+        display: none;
+    }
+
+    /* Mostra e alinha os links na horizontal */
+    .hamb-links {
+        display: flex;
+        /* Volta à posição normal na barra */
+        position: static; 
+        flex-direction: row;
+        padding: 0;
+        gap: 0.5rem;
+    }
+    
+
+
+}
+
+
+
+
