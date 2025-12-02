@@ -1,0 +1,84 @@
+📚 Fontes Principais
+1. História do OCR e sua evolução
+
+Tesseract OCR – Google / HP
+Smith, Ray. “An Overview of the Tesseract OCR Engine.”
+https://github.com/tesseract-ocr
+
+Computer History Museum – OCR
+History of Optical Character Recognition
+https://computerhistory.org
+
+Mori, S., Suen, C., & Yamamoto, K. “Historical Review of OCR Research and Development.”
+Proceedings of the IEEE, 1992.
+
+2. Leitores de ecrã (JAWS, NVDA, VoiceOver)
+
+Freedom Scientific (JAWS)
+https://www.freedomscientific.com/
+
+NV Access (NVDA)
+https://www.nvaccess.org/
+
+Apple VoiceOver — documentação oficial
+https://www.apple.com/accessibility/
+
+3. Normas de acessibilidade (HTML, WCAG)
+
+W3C – Web Content Accessibility Guidelines (WCAG 2.1 / 2.2)
+https://www.w3.org/WAI/standards-guidelines/wcag/
+
+WAI-ARIA – Especificação para acessibilidade web
+https://www.w3.org/WAI/standards-guidelines/aria/
+
+WebAIM – Recursos sobre acessibilidade e leitores de ecrã
+https://webaim.org/
+
+Estas fontes são essenciais para explicar o problema da má estruturação HTML.
+
+4. OCR moderno + IA e Deep Learning
+
+IBM – OCR e Inteligência Artificial
+“What is Optical Character Recognition?”
+https://www.ibm.com
+
+Microsoft – Document Intelligence / OCR com IA
+https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence/
+
+Wick, C., Seuret, M., & Eichenberger, N.
+“Calamari – A High-Performance OCR Engine Based on Deep Learning.” (arXiv)
+https://arxiv.org/abs/1807.02040
+
+5. Tecnologias modernas para acessibilidade ( exemplos práticos )
+
+Seeing AI – Microsoft
+https://www.microsoft.com/en-us/ai/seeing-ai
+
+OrCam – dispositivos com OCR + IA
+https://www.orcam.com
+
+MegaPontes – soluções OCR para deficiência visual
+https://megapontes.pt/
+
+6. Limitações atuais — IA, acessibilidade e desafios
+
+WebAIM – “Screen Reader User Survey” (dados sobre reais dificuldades)
+https://webaim.org/projects/screenreadersurvey/
+
+W3C – Known Accessibility Issues on the Web
+https://www.w3.org/WAI/
+
+Papers sobre limitações da IA (alucinações, erros de contexto):
+
+Ji et al. “Survey of Hallucination in AI Models.” (ACM Computing Surveys, 2023)
+
+7. O futuro da tecnologia (tendências de IA)
+
+Gartner – tendências de IA
+https://www.gartner.com
+
+MIT Technology Review – IA e acessibilidade
+https://www.technologyreview.com
+
+Stanford AI Index Report (tendências globais de IA)
+https://aiindex.stanford.edu
